@@ -1,25 +1,14 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <h1 className="title">Microservices Frontend</h1>
+      <div className="services">
+        <a href="http://localhost:3001" className="service-box grocery" target="_blank" rel="noopener noreferrer">Grocery App</a>
+        <a href="http://localhost:3002" className="service-box todos" target="_blank" rel="noopener noreferrer">Todos App</a>
+        <a href="http://192.168.1.12:3002" className="service-box orders" target="_blank" rel="noopener noreferrer">Orders App</a>
+      </div>
     </div>
   );
 }
-
-export default App;
