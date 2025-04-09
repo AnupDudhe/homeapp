@@ -46,8 +46,9 @@ pm2 serve ./build 3000 --name "home-frontend" --spa
 pm2 serve ./build 3002 --name "home-frontend" --spa #if you have 3000/or any other  port is reserved with 3000 port
 ```
 
+#Final homeapp deployment ref
 
-
+<img width="955" alt="image" src="https://github.com/user-attachments/assets/7ecf6a12-6804-425c-b155-63c9563d3f5d" />
 
 
 ---------------------------------------------------
