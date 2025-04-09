@@ -9,7 +9,11 @@ Follow these steps to set up and run the project locally.
 Ensure you have the following installed on your system:  
 in .env file of frontend code make following changes :-
 ```
-REACT_APP_API_URL=http://webserverpublicIP:the_dynamicport_onwhich_your_todosapi_is_hosted_on
+REACT_APP_GROCERY_URL=http://34.69.126.52:3000/
+REACT_APP_GROCERY_URL=http://groceryappserverIP:portonwhichgroceryappishosted/
+REACT_APP_TODOS_URL=http://34.69.126.52:3001/
+REACT_APP_GROCERY_URL=http://todosappserverIP:portonwhichtodosappishosted/
+REACT_APP_ORDERS_URL=http://34.69.126.52:3002/
 ```
 - **[Node.js](https://nodejs.org/)** (LTS version recommended)  
 - **npm** (Comes with Node.js)  
