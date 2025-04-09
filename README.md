@@ -33,7 +33,7 @@ sudo apt install -y nodejs
 ```
    npm run build //to build you fe
 ```
-### lets get our front production grade ready on server
+### lets get our frontend homeapp production grade ready on server
 ```
 npm install
 npm run build
