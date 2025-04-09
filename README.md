@@ -1,3 +1,52 @@
+
+# HomeAppFE 🚀  
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).  
+
+## 📌 Getting Started  
+Follow these steps to set up and run the project locally.  
+
+### ✅ Prerequisites  
+Ensure you have the following installed on your system:  
+in .env file of frontend code make following changes :-
+```
+REACT_APP_API_URL=http://webserverpublicIP:the_dynamicport_onwhich_your_todosapi_is_hosted_on
+```
+- **[Node.js](https://nodejs.org/)** (LTS version recommended)  
+- **npm** (Comes with Node.js)  
+### install node js 
+```
+curl -fsSL https://deb.nodesource.com/setup_lts.x | sudo -E bash -
+sudo apt install -y nodejs
+```
+
+
+
+### 📥 Installation 
+1. **Clone the repository:**  
+   ```sh
+   git clone https://github.com/AnupDudhe/homeapp.git    
+   cd homeapp
+   npm install
+   npm install dotenv
+   npm start
+### To build your frontend use following comman
+```
+   npm run build //to build you fe
+```
+### lets get our front production grade ready on server
+```
+npm install
+npm run build
+pm2 list
+pm2 serve ./build 3000 --name "home-frontend" --spa
+pm2 serve ./build 3002 --name "home-frontend" --spa #if you have 3000/or any other  port is reserved with 3000 port
+```
+
+
+
+
+
+---------------------------------------------------
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
