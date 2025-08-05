@@ -1,0 +1,23 @@
+steps:
+  # Step 1: Install dependencies
+  - name: 'node:18'
+    entrypoint: 'npm'
+    args: ['install']
+
+  # Step 2: Build the React app
+  - name: 'node:18'
+    entrypoint: 'npm'
+    args: ['run', 'build']
+
+  # Step 3: Copy build to GCS bucket (static hosting)
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    args: ['gsutil', '-m', 'cp', '-r', 'build/*', 'gs://YOUR_BUCKET_NAME/']
+
+options:
+  logging: CLOUD_LOGGING_ONLY
+
+# Optional: Save build artifacts
+artifacts:
+  objects:
+    location: 'gs://YOUR_BUCKET_NAME/artifacts/'
+    paths: ['build/**']
