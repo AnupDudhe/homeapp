@@ -19,5 +19,5 @@ options:
 # Optional: Save build artifacts
 artifacts:
   objects:
-    location: 'gs://YOUR_BUCKET_NAME/artifacts/'
+    location: 'gs://artifactcbz/artifacts/'
     paths: ['build/**']
