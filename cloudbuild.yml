@@ -9,14 +9,23 @@ steps:
     entrypoint: 'npm'
     args: ['run', 'build']
 
-  # Step 3: Copy build to GCS bucket (static hosting)
+  # Step 3: Copy build to GCS bucket
   - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
     args: ['gsutil', '-m', 'cp', '-r', 'build/*', 'gs://artifactcbz/']
+
+  # Step 4: SSH into VM and copy build from GCS
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    entrypoint: 'bash'
+    args:
+      - '-c'
+      - |
+        gcloud compute ssh webserver \
+        --zone=us-west1-a \
+        --command="sudo mkdir -p /var/www/html/react && sudo gsutil -m cp -r gs://artifactcbz/* /var/www/html/react/"
 
 options:
   logging: CLOUD_LOGGING_ONLY
 
-# Optional: Save build artifacts
 artifacts:
   objects:
     location: 'gs://artifactcbz/artifacts/'
