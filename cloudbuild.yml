@@ -11,7 +11,7 @@ steps:
 
   # Step 3: Copy build to GCS bucket (static hosting)
   - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
-    args: ['gsutil', '-m', 'cp', '-r', 'build/*', 'gs://YOUR_BUCKET_NAME/']
+    args: ['gsutil', '-m', 'cp', '-r', 'build/*', 'gs://artifactcbz/']
 
 options:
   logging: CLOUD_LOGGING_ONLY
